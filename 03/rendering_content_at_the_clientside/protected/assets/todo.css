@@ -1,0 +1,31 @@
+.todo-index .status {
+    padding: 10px;
+    height: 2em;
+}
+
+.todo-index .task {
+    padding: 4px;
+}
+
+.todo-index .task.done {
+    text-decoration: line-through;
+}
+
+.todo-index .task input[type=text] {
+    border: 1px solid transparent;
+    padding: 4px;
+    margin: 0 4px;
+    width: 300px;
+}
+
+.todo-index .task input:focus, .todo-index .task input:focus:hover {
+    border-color: #999;
+}
+
+.todo-index .task input:hover {
+    border-color: #eee;
+}
+
+.todo-index .new-task {
+    padding: 1em;
+}
