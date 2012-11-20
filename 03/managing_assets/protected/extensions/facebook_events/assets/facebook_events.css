@@ -1,0 +1,16 @@
+.facebook-events {
+	padding: 10px;
+	width: 400px;
+	float: left;
+}
+
+.facebook-events ul {
+	padding: 0;
+}
+
+.facebook-events li {
+	list-style: none;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 2px;
+}

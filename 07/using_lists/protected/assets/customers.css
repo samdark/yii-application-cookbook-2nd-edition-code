@@ -1,0 +1,11 @@
+ol.customers {
+	list-style: none;
+	margin: 1em 0;
+}
+
+ol.customers>li {
+	margin: 1em;
+	padding:1em;
+	background: #fcfcfc;
+	border: 1px solid #9aafe5;
+}
