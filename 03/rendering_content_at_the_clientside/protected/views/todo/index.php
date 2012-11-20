@@ -18,7 +18,7 @@ Yii::app()->clientScript->registerScript('todo', "todo.init($options);", CClient
 </div>
 
 <script id="template-task" type="text/x-dot-template">
-	<div class="task" data-id="{{!it.id}}">
+	<div class="task{{? it.done==1}} done{{?}}" data-id="{{!it.id}}">
 		<input type="checkbox"{{? it.done==1}}checked {{?}}/>
 		<input type="text" value="{{!it.title}}" />
 		<a href="#delete" class="delete">Remove</a>
