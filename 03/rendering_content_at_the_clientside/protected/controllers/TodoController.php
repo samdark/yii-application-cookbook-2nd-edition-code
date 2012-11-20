@@ -12,7 +12,7 @@ class TodoController extends CController
 	public function actionTask()
 	{
 		$req = Yii::app()->request;
-		if($req->getIsPostRequest()) {
+		if($req->isPostRequest) {
 			$this->handlePost($req->getPost('id'), $req->getPost('Task'));
 		}
 		elseif($req->isPutRequest) {
@@ -29,7 +29,7 @@ class TodoController extends CController
 	private function handleGet($id)
 	{
 		if($id) {
-			$task = $this->getTask($id);
+			$task = $this->loadModel($id);
 			$this->sendResponse($task->attributes);
 		}
 		else {
@@ -50,7 +50,7 @@ class TodoController extends CController
 
 	private function handlePost($id, $data)
 	{
-		$task = $this->getTask($id);
+		$task = $this->loadModel($id);
 		$this->saveTask($task, $data);
 	}
 
@@ -76,7 +76,7 @@ class TodoController extends CController
 
 	private function handleDelete($id)
 	{
-		$task = $this->getTask($id);
+		$task = $this->loadModel($id);
 		if($task->delete()) {
 			$this->sendResponse('OK');
 		}
@@ -85,7 +85,7 @@ class TodoController extends CController
 		}
 	}
 
-	private function getTask($id)
+	private function loadModel($id)
 	{
 		$task = Task::model()->findByPk($id);
 		if(!$task) {
