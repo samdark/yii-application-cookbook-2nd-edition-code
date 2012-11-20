@@ -41,15 +41,17 @@ var todo = {
 	onDelete: function(e) {
 		e.preventDefault();
 
+		var id = $(this).parents('.task').attr('data-id');
+
 		$.ajax({
 			url: todo.options.taskEndpoint,
 			type: 'delete',
 			data: {
-				id: $(this).parents('.task').attr('data-id')
+				id: id
 			},
 			dataType: 'json',
-			success: function(response) {
-				$('.task[data-id='+response.data.id+']').remove();
+			success: function() {
+				$('.task[data-id='+id+']').remove();
 			},
 			error: todo.onFailure
 		});

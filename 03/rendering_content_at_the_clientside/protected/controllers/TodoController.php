@@ -78,7 +78,7 @@ class TodoController extends CController
 	{
 		$task = $this->getTask($id);
 		if($task->delete()) {
-			$this->sendResponse($task->attributes);
+			$this->sendResponse('OK');
 		}
 		else {
 			$this->sendResponse(array(), 500, array('Unable to delete task.'));
