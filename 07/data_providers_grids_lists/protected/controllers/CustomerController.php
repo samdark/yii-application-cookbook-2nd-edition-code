@@ -125,28 +125,28 @@ class CustomerController extends Controller
 	/**
 	 * Lists all models.
 	 */
-public function actionIndex()
-{
-	$dataProvider=new CActiveDataProvider('Customer');
-	$this->render('index',array(
-		'dataProvider'=>$dataProvider,
-	));
-}
+	public function actionIndex()
+	{
+		$dataProvider=new CActiveDataProvider('Customer');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
 
 	/**
 	 * Manages all models.
 	 */
-public function actionAdmin()
-{
-	$model=new Customer('search');
-	$model->unsetAttributes();  // clear any default values
-	if(isset($_GET['Customer']))
-		$model->attributes=$_GET['Customer'];
+	public function actionAdmin()
+	{
+		$model=new Customer('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Customer']))
+			$model->attributes=$_GET['Customer'];
 
-	$this->render('admin',array(
-		'model'=>$model,
-	));
-}
+		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

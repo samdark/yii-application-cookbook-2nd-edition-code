@@ -8,13 +8,13 @@ class EKohanaAutoloader
 	static $paths = array();
 
 	/**
-     * Class autoload loader.
-     *
-     * @static
-     * @param string $className
-     * @return boolean
-     */
-    static function loadClass($className)
+	 * Class autoload loader.
+	 *
+	 * @static
+	 * @param string $className
+	 * @return boolean
+	 */
+	static function loadClass($className)
 	{
 		if(!defined("SYSPATH"))
 			define("SYSPATH", Yii::getPathOfAlias("application.vendors.Kohana.system"));

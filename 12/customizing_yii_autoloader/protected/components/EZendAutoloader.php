@@ -11,16 +11,16 @@ class EZendAutoloader
 	/**
 	 * @var string path to where Zend classes root is located
 	 */
-    static $basePath = null;
+	static $basePath = null;
 
-    /**
-     * Class autoload loader.
-     *
-     * @static
-     * @param string $className
-     * @return boolean
-     */
-    static function loadClass($className)
+	/**
+	 * Class autoload loader.
+	 *
+	 * @static
+	 * @param string $className
+	 * @return boolean
+	 */
+	static function loadClass($className)
 	{
 		foreach(self::$prefixes as $prefix)
 		{

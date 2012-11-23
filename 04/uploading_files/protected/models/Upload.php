@@ -5,8 +5,8 @@ class Upload extends CFormModel
 
 	public function rules()
 	{
-        return array(
-            array('file', 'file', 'types'=>'zip'),
-        );
-    }
+		return array(
+			array('file', 'file', 'types'=>'zip'),
+		);
+	}
 }

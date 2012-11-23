@@ -8,14 +8,13 @@ class UploadController extends Controller
 
 		$model=new Upload();
 
-      if(isset($_POST['Upload']))
-	   {
-          $model->attributes=$_POST['Upload'];
-          $file=CUploadedFile::getInstance($model,'file');
-          if($model->validate()){
-		$uploaded = $file->saveAs($dir.'/'.$file->getName());
-        }
-      }
+		if(isset($_POST['Upload']))
+		{
+			$model->attributes=$_POST['Upload'];
+			$model->file=CUploadedFile::getInstance($model,'file');
+			if($model->validate())
+				$uploaded = $model->file->saveAs($dir.'/'.$model->file->getName());
+		}
 
       $this->render('index', array(
 			'model' => $model,

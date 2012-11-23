@@ -5,7 +5,7 @@
 		<title>404</title>
 	</head>
 	<body>
-        <h1>404</h1>
+		<h1>404</h1>
 
 		<?php if(!empty($models)):?>
 		<p>Probably you've searched for:</p>

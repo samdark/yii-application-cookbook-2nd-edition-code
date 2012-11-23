@@ -8,8 +8,8 @@ class FamilyCar extends Car
 
 	public function defaultScope()
 	{
-        return array(
-            'condition'=>"type='family'",
-        );
-    }
+		return array(
+			'condition'=>"type='family'",
+		);
+	}
 }

@@ -16,7 +16,7 @@ class SqlController extends CController
 			echo "Failure";
 		}
 	}
-	
+
 	public function actionPrepared()
 	{
 		$userName = $_GET['username'];
@@ -35,7 +35,7 @@ class SqlController extends CController
 			echo "Failure";
 		}
 	}
-	
+
 	public function actionAr()
 	{
 		$userName = $_GET['username'];
@@ -54,7 +54,7 @@ class SqlController extends CController
 			echo "Failure";
 		}
 	}
-	
+
 	public function actionWrongAr()
 	{
 		$userName = $_GET['username'];
@@ -70,7 +70,7 @@ class SqlController extends CController
 			echo "Failure";
 		}
 	}
-	
+
 	public function actionIn()
 	{
 		$criteria = new CDbCriteria();
@@ -93,7 +93,7 @@ class SqlController extends CController
 			echo $user->username."<br />";
 		}
 	}
-	
+
 	public function actionWhitelist()
 	{
 		$attr = $_GET['attr'];

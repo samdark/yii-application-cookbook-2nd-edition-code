@@ -7,7 +7,7 @@ class EmailForm extends CFormModel
 	function rules(){
         return array(
 			array('email', 'email'),
-         array('verifyCode', 'captcha', 'allowEmpty'=> !CCaptcha::checkRequirements()),
-        );
-    }
+			array('verifyCode', 'captcha', 'allowEmpty'=> !CCaptcha::checkRequirements()),
+		);
+	}
 }

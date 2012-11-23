@@ -27,6 +27,6 @@ class EmailController extends Controller
 		$this->render('index', array(
 			'model' => $model,
 			'success' => $success,
-	    ));
+		));
 	}
 }

@@ -21,7 +21,8 @@ class LyricsFinder
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		$result = curl_exec($curl);
 
-		// if there is HTTP error we'll throw an exception				if($result===false)
+		// if there is HTTP error we'll throw an exception
+		if($result===false)
 		{
 			$errorText = curl_error($curl);
 			curl_close($url);
