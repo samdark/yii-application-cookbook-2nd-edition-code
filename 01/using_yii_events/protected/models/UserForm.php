@@ -13,10 +13,6 @@ class UserForm extends CFormModel
 		);
 	}
 
-	// $event argument here is CEvent instance that
-	// was created passed when an event method was called.
-	// This time it was happened inside of
-	// CModel::afterValidate().
 	function afterValidate()
 	{
 		// If this method was called then

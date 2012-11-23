@@ -15,7 +15,7 @@ class LyricsFinder
 
 	function getText($songTitle)
 	{
-		$url = $this->getUrl($songTitle);
+		$url = $this->getRequestUrl($songTitle);
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);

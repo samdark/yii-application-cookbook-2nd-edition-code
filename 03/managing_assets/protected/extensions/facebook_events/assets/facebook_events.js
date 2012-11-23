@@ -7,7 +7,7 @@ jQuery(function($){
 			var html = "<ul>";
 			$.each(json.data,function(){
 				html += "<li>"+
-					"<p><strong>" + this.name + "</strong></p><p>"+this.location
+					"<p><strong>" + this.name + "</strong></p><p>"+this.location+
 				"</p></li>";
 			});
 			html += "</ul>";

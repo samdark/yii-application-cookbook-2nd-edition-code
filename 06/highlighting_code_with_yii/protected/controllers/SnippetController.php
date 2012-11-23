@@ -5,7 +5,7 @@ class SnippetController extends CController
 	{
 		$criteria = new CDbCriteria();
 		$criteria->order = 'id DESC';
-		$models = Snippet::model()->findAll();
+		$models = Snippet::model()->findAll($criteria);
 		$this->render('index', array(
 			'models' => $models,
 		));

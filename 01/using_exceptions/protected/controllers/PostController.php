@@ -6,7 +6,7 @@ class PostController extends CController
 		if(!isset($_GET['id']))
 			// If there is no post ID supplied, request is definitely wrong.
 			// According to HTTP specification its code is 400.
-			throw new ChttpException(400);
+			throw new CHttpException(400);
 
 		// Finding a post by its ID
 		$post = Post::model()->findByPk($_GET['id']);
