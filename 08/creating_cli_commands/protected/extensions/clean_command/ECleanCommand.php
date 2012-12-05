@@ -54,17 +54,19 @@ public function getHelp()
 	}
 
 	private function removeDirRecursive($dir)
-    {
-		$files = glob($dir.'*', GLOB_MARK);
-		foreach ($files as $file)
+	{
+		$files = glob($dir.DIRECTORY_SEPARATOR.'{,.}*', GLOB_MARK | GLOB_BRACE);
+		foreach($files as $file)
 		{
-			if (is_dir($file))
+			if(basename($file) == '.' || basename($file) == '..')
+				continue;
+
+			if(substr($file, - 1) == DIRECTORY_SEPARATOR)
 				$this->removeDirRecursive($file);
 			else
 				unlink($file);
 		}
-
-		if (is_dir($dir))
+		if(is_dir($dir))
 			rmdir($dir);
-    }
+	}
 }
