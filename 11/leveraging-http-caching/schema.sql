@@ -1,0 +1,7 @@
+CREATE TABLE book (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	title VARCHAR(255) NOT NULL,
+	text TEXT NOT NULL,
+	created_at INT(11) NOT NULL,
+	updated_at INT(11) NOT NULL
+);
