@@ -1,4 +1,5 @@
 <?php
+
 class NewsController extends Controller
 {
 	public function filters()

@@ -1,7 +1,8 @@
 <?php
+
 class EBBCode
 {
-	function process($string)
+	public function process($string)
 	{
 		$preg = array(
 			'~\[b\](.*?)\[/b\]~i' => '<strong>$1</strong>',

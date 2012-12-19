@@ -1,4 +1,5 @@
 <?php
+
 class SqlController extends CController
 {
 	public function actionSimple()

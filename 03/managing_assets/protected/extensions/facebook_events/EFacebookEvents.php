@@ -1,4 +1,5 @@
 <?php
+
 class EFacebookEvents extends CWidget
 {
 	public $keyword;

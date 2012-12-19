@@ -1,4 +1,5 @@
 <?php
+
 class FamilyCar extends Car
 {
 	public static function model($className=__CLASS__)

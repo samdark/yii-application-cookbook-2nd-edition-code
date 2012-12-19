@@ -1,4 +1,5 @@
 <?php
+
 class SnippetController extends CController
 {
 	public function actionIndex()

@@ -1,5 +1,6 @@
 <?php
-class DefaultController extends Controller
+
+class DefaultController extends CController
 {
 	public function actionIndex()
 	{

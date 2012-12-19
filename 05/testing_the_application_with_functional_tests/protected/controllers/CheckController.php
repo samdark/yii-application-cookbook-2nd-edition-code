@@ -1,5 +1,6 @@
 <?php
-class CheckController extends Controller
+
+class CheckController extends CController
 {
 	function actionIndex()
 	{

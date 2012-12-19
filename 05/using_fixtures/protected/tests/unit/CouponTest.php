@@ -1,4 +1,5 @@
 <?php
+
 class CouponTest extends CDbTestCase
 {
 	public $fixtures = array(
@@ -8,7 +9,7 @@ class CouponTest extends CDbTestCase
 	public static function setUpBeforeClass()
 	{
 		if(!extension_loaded('pdo') || !extension_loaded('pdo_sqlite'))
-			markTestSkipped('PDO and SQLite extensions are required.');
+			self::markTestSkipped('PDO and SQLite extensions are required.');
 
 		$config=array(
 			'basePath'=>dirname(__FILE__),

@@ -1,4 +1,5 @@
 <?php
+
 class JsonApiController extends CController
 {
 	const RESPONSE_OK = 'OK';

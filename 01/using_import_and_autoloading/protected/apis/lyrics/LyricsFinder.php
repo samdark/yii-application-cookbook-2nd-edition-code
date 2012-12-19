@@ -1,4 +1,5 @@
 <?php
+
 class LyricsFinder
 {
 	public function getText($song)

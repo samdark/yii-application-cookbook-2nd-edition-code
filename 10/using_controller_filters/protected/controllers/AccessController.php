@@ -1,4 +1,5 @@
 <?php
+
 class AccessController extends CController
 {
 	public function filters()
@@ -34,7 +35,6 @@ class AccessController extends CController
 			array('deny'),
 		);
 	}
-
 
 	public function actionAuthOnly()
 	{

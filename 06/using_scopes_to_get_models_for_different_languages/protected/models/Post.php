@@ -96,7 +96,8 @@ class Post extends CActiveRecord
 		);
 	}
 
-	public function lang($lang){
+	public function lang($lang)
+	{
 		$this->getDbCriteria()->mergeWith(array(
 			'condition' => "lang=:lang",
 			'params' => array(

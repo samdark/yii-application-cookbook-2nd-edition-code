@@ -1,4 +1,5 @@
 <?php
+
 class Cookie
 {
 	public static function get($name)

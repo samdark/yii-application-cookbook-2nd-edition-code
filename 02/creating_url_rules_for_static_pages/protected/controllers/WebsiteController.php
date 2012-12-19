@@ -1,4 +1,5 @@
 <?php
+
 class WebsiteController extends CController
 {
 	public function actionPage($alias)

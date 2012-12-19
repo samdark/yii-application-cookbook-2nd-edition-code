@@ -1,14 +1,15 @@
 <?php
-class SmartyController extends Controller
+
+class SmartyController extends CController
 {
-	function actionNative()
+	public function actionNative()
 	{
 		$this->render('native', array(
 			'username' => 'Alexander',
 		));
 	}
 
-	function actionSmarty()
+	public function actionSmarty()
 	{
 		$this->render('smarty', array(
 			'username' => 'Alexander',

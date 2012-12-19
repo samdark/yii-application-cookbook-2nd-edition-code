@@ -1,5 +1,6 @@
 <?php
-class GridController extends Controller
+
+class GridController extends CController
 {
 	public function actionAR()
 	{

@@ -2,10 +2,13 @@
 // All standard AR methods are omitted to emphasize on what was added
 // Use Gii to generate Post model and then add methods listed below:
 
-class Post extends CActiveRecord {
-	// custom method for adding a comment
-	// to current post
-	function addComment(Comment $comment){
+class Post extends CActiveRecord
+{
+	/**
+	 * custom method for adding a comment to current post
+	 */
+	public function addComment(Comment $comment)
+	{
 		$comment->post_id = $this->id;
 
 		// creating event class instance
@@ -19,7 +22,8 @@ class Post extends CActiveRecord {
 	}
 
 	// defining onNewComment event
-	public function onNewComment($event) {
+	public function onNewComment($event)
+	{
 		// Event is actually triggered here. This way we can use
 		// onNewComment method instead of raiseEvent.
 		$this->raiseEvent('onNewComment', $event);

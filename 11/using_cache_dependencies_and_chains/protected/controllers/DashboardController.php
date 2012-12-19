@@ -1,4 +1,5 @@
 <?php
+
 class DashboardController extends CController
 {
 	public function filters()
@@ -7,7 +8,7 @@ class DashboardController extends CController
 			array(
 				'COutputCache +index',
 				// will expire in a year
-				'duration'=>24*3600*365,
+				'duration'=>3600*24*365,
 				'dependency'=>array(
 					'class'=>'CChainedCacheDependency',
 					'dependencies'=>array(

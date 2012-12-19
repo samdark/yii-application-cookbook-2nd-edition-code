@@ -1,4 +1,5 @@
 <?php
+
 class MathCaptchaAction extends CCaptchaAction
 {
 	protected function generateVerifyCode()

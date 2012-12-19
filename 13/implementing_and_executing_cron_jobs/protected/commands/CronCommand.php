@@ -1,4 +1,5 @@
 <?php
+
 class CronCommand extends CConsoleCommand
 {
 	public function run($args)

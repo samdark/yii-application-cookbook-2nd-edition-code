@@ -1,4 +1,5 @@
 <?php
+
 class BBCodeTest extends CTestCase
 {
 	private function process($bbCode)
@@ -7,7 +8,7 @@ class BBCodeTest extends CTestCase
 		return $bb->process($bbCode);
 	}
 
-	function testSingleTags()
+	public function testSingleTags()
 	{
 		$this->assertEquals('<strong>test</strong>', $this->process('[b]test[/b]'));
 		$this->assertEquals('<em>test</em>', $this->process('[i]test[/i]'));
@@ -21,7 +22,7 @@ class BBCodeTest extends CTestCase
 		);
 	}
 
-	function testMultipleTags()
+	public function testMultipleTags()
 	{
 		$this->assertEquals(
 			'<strong>test1</strong> <strong>test2</strong>',

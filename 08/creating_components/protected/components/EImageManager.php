@@ -1,4 +1,5 @@
 <?php
+
 class EImageManager extends CApplicationComponent
 {
 	protected $image;
@@ -8,7 +9,8 @@ class EImageManager extends CApplicationComponent
 	protected $newWidth;
 	protected $newHeight;
 
-	public function resize($width = false, $height = false){
+	public function resize($width = false, $height = false)
+	{
 		if($width!==false) $this->newWidth = $width;
 		if($height!==false) $this->newHeight = $height;
 
@@ -39,7 +41,6 @@ class EImageManager extends CApplicationComponent
 
 	public function save($filePath)
 	{
-
 		$ext = pathinfo($filePath, PATHINFO_EXTENSION);
 
 		$newImage = imagecreatetruecolor($this->newWidth, $this->newHeight);

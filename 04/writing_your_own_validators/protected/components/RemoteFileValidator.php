@@ -1,4 +1,5 @@
 <?php
+
 class RemoteFileValidator extends CValidator
 {
 	public $content = '';

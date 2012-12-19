@@ -1,4 +1,5 @@
 <?php
+
 class ErrorController extends CController
 {
 	public function actionIndex()

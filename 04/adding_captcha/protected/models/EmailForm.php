@@ -1,4 +1,5 @@
 <?php
+
 class EmailForm extends CFormModel
 {
 	public $verifyCode;

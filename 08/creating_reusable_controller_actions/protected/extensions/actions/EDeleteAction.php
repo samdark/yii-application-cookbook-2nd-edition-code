@@ -1,4 +1,5 @@
 <?php
+
 class EDeleteAction extends CAction
 {
 	public $modelName;

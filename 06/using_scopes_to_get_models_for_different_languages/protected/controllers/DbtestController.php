@@ -1,4 +1,5 @@
 <?php
+
 class DbtestController extends CController
 {
 	public function actionIndex()

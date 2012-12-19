@@ -1,4 +1,5 @@
 <?php
+
 class DbController extends Controller
 {
 	protected function afterAction($action)
@@ -8,7 +9,6 @@ class DbController extends Controller
 		echo "Time: $time, memory: $memory";
 		parent::afterAction($action);
 	}
-
 
 	public function actionAr()
 	{
