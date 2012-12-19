@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is simple implementation of a Smarty view renderer
+ * This is a simple implementation of a Smarty view renderer
  *
- * For a more complete implementation and renderers for other template engines,
+ * For a more complete implementation and renderers for other template engines
  * you might want to check out:
  * http://yiiext.github.com/extensions/renderers.html
  */
