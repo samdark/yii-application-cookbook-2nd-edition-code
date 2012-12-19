@@ -1,6 +1,17 @@
 <?php
-class CheckAllWidgetTest extends WebTestCase
+
+class CheckAllWidgetTest extends CWebTestCase
 {
+	/**
+	 * Sets up before each test method runs.
+	 */
+	protected function setUp()
+	{
+		parent::setUp();
+		// set the base URL for the test application.
+		$this->setBrowserUrl('http://localhost/test-application');
+	}
+
 	public function testWidget()
 	{
 		$this->open('check/index');
