@@ -1,4 +1,5 @@
 <?php
+
 class XssController extends CController
 {
 	public function actionSimple()

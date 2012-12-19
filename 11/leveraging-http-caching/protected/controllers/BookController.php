@@ -1,6 +1,6 @@
 <?php
 
-class BookController extends Controller
+class BookController extends CController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning

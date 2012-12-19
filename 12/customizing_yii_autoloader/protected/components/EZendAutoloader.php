@@ -1,4 +1,5 @@
 <?php
+
 class EZendAutoloader
 {
 	/**
@@ -26,7 +27,8 @@ class EZendAutoloader
 		{
 			if(strpos($className, $prefix.'_')!==false)
 			{
-				if(!self::$basePath) self::$basePath = Yii::getPathOfAlias("application.vendors").'/';
+				if(!self::$basePath)
+					self::$basePath = Yii::getPathOfAlias("application.vendors").'/';
 				include self::$basePath.str_replace('_','/',$className).'.php';
 				return class_exists($className, false) || interface_exists($className, false);
 			}

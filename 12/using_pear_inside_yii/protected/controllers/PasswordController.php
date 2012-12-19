@@ -1,4 +1,5 @@
 <?php
+
 class PasswordController extends CController
 {
 	public function actionIndex()

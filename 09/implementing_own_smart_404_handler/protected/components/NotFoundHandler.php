@@ -1,4 +1,5 @@
 <?php
+
 class NotFoundHandler
 {
 	public static function handle(CExceptionEvent $event)

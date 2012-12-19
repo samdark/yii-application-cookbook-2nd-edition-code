@@ -1,4 +1,5 @@
 <?php
+
 class DataCommand extends CConsoleCommand
 {
 	public function actionIndex()
