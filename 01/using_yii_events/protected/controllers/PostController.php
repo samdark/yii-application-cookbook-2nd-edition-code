@@ -1,7 +1,8 @@
 <?php
+
 class PostController extends CController
 {
-	function actionAddComment()
+	public function actionAddComment()
 	{
 		$post = Post::model()->findByPk(10);
 		$notifier = new Notifier();
@@ -9,7 +10,7 @@ class PostController extends CController
 		// attaching event handler
 		$post->onNewComment = array($notifier, 'comment');
 
-		// in the real application data should come from $_POST
+		// in the real application, data should come from $_POST,
 		$comment = new Comment();
 		$comment->author = 'Sam Dark';
 		$comment->text = 'Yii events are amazing!';

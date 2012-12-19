@@ -1,4 +1,5 @@
 <?php
+
 class WikiMarkdownParser extends CMarkdownParser
 {
 	public function transform($text)

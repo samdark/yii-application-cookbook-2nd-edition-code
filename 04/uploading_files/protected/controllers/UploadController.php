@@ -1,7 +1,8 @@
 <?php
+
 class UploadController extends Controller
 {
-	function actionIndex()
+	public function actionIndex()
 	{
 		$dir = Yii::getPathOfAlias('application.uploads');
 		$uploaded = false;
@@ -16,10 +17,10 @@ class UploadController extends Controller
 				$uploaded = $model->file->saveAs($dir.'/'.$model->file->getName());
 		}
 
-      $this->render('index', array(
+		$this->render('index', array(
 			'model' => $model,
 			'uploaded' => $uploaded,
 			'dir' => $dir,
-	   ));
+		));
 	}
 }

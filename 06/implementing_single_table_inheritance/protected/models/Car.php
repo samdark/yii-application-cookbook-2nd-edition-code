@@ -1,4 +1,5 @@
 <?php
+
 class Car extends CActiveRecord
 {
 	public static function model($className=__CLASS__)

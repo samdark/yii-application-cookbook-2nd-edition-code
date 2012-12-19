@@ -1,13 +1,14 @@
 <?php
+
 class ECleanCommand extends CConsoleCommand
 {
 	public $webRoot;
 
-public function getHelp()
-{
-	$out = "Clean command allows you to clean up various temporary data Yii and an application are generating.\n\n";
-	return $out.parent::getHelp();
-}
+	public function getHelp()
+	{
+		$out = "Clean command allows you to clean up various temporary data Yii and an application are generating.\n\n";
+		return $out.parent::getHelp();
+	}
 
 	public function actionCache()
 	{

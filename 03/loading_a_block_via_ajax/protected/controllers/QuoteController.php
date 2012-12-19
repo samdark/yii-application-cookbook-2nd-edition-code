@@ -1,4 +1,5 @@
 <?php
+
 class QuoteController extends Controller
 {
 	private $quotes = array(

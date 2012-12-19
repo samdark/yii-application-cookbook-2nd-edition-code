@@ -1,7 +1,8 @@
 <?php
+
 class TestController extends CController
 {
-	function actionIndex()
+	public function actionIndex()
 	{
 		$post=new Post();
 		$post->title='links test';

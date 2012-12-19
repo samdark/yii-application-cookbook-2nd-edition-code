@@ -1,4 +1,5 @@
 <?php
+
 class RangeInputField extends CInputWidget
 {
 	public $attributeFrom;
@@ -10,7 +11,7 @@ class RangeInputField extends CInputWidget
 	public $valueFrom;
 	public $valueTo;
 
-	function run()
+	public function run()
 	{
 		if($this->hasModel())
 		{

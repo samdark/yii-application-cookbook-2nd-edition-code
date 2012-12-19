@@ -1,10 +1,14 @@
 <?php
+
 class MyEventHandler
 {
-	static function handleMissingTranslation($event)
+	/**
+	 * @param CMissingTranslationEvent $event
+	 */
+	public static function handleMissingTranslation($event)
 	{
-		// event class for this event is CMissingTranslationEvent
-		// so we can get some info about the message
+		// The event class for this event is CMissingTranslationEvent,
+		// so we can get some info about the untranslated message from it.
 		$text = implode("\n", array(
 			'Language: '.$event->language,
 			'Category:'.$event->category,

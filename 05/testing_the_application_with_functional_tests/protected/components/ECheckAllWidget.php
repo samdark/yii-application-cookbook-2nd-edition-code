@@ -1,4 +1,5 @@
 <?php
+
 class ECheckAllWidget extends CWidget
 {
 	public $checkedTitle = 'Uncheck all';

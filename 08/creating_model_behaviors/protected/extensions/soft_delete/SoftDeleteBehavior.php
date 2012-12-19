@@ -1,4 +1,5 @@
 <?php
+
 class SoftDeleteBehavior extends CActiveRecordBehavior
 {
 	public $flagField = 'is_deleted';

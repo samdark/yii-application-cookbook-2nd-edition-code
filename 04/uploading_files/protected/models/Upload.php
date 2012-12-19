@@ -1,4 +1,5 @@
 <?php
+
 class Upload extends CFormModel
 {
 	public $file;

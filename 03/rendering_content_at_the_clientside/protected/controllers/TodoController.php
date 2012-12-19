@@ -1,4 +1,5 @@
 <?php
+
 class TodoController extends CController
 {
 	public function actionIndex()
@@ -91,7 +92,6 @@ class TodoController extends CController
 		if(!$task) {
 			$this->sendResponse(array(), 404, array('Task not found.'));
 		}
-
 		return $task;
 	}
 
@@ -108,7 +108,7 @@ class TodoController extends CController
 			header("HTTP/1.0 $responseCode ".$messages[$responseCode], true, $responseCode);
 		}
 
-		echo json_encode(array(
+		echo CJSON::encode(array(
 			'errors' => $errors,
 			'data' => $data,
 		));

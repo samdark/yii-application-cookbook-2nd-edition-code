@@ -47,7 +47,7 @@ class Snippet extends CActiveRecord
 		$highlighter->language = $this->language;
 		$this->html = $highlighter->highlight($this->code);
 
-		return parent::afterValidate();
+		parent::afterValidate();
 	}
 
 	public function getSupportedLanguages()

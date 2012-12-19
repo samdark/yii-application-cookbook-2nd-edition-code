@@ -1,4 +1,5 @@
 <?php
+
 class UserForm extends CFormModel
 {
 	public $firstName;
@@ -13,9 +14,9 @@ class UserForm extends CFormModel
 		);
 	}
 
-	function afterValidate()
+	protected function afterValidate()
 	{
-		// If this method was called then
+		// If this method was called, then
 		// the model is already filled
 		// with data and data is valid
 		// so we can use it safely:
@@ -23,6 +24,6 @@ class UserForm extends CFormModel
 
 		// It's important to call parent class method
 		// so all other event handlers are called
-		return parent::afterValidate();
+		parent::afterValidate();
 	}
 }

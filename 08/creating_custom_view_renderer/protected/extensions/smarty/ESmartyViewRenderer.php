@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * This is simple implementation of a Smarty view renderer
+ *
+ * For a more complete implementation and renderers for other template engines,
+ * you might want to check out:
+ * http://yiiext.github.com/extensions/renderers.html
+ */
 class ESmartyViewRenderer extends CApplicationComponent implements IViewRenderer
 {
 	public $fileExtension='.tpl';
@@ -6,8 +14,10 @@ class ESmartyViewRenderer extends CApplicationComponent implements IViewRenderer
 
 	private $smarty;
 
-	function init()
+	public function init()
 	{
+		parent::init();
+
 		Yii::import('application.vendors.smarty.*');
 
 		spl_autoload_unregister(array('YiiBase','autoload'));
@@ -36,7 +46,8 @@ class ESmartyViewRenderer extends CApplicationComponent implements IViewRenderer
 	 * @param boolean whether the rendering result should be returned
 	 * @return mixed the rendering result, or null if the rendering result is not needed.
 	 */
-	public function renderFile($context,$sourceFile,$data,$return) {
+	public function renderFile($context,$sourceFile,$data,$return)
+	{
 		// current controller properties will be accessible as {this.property}
 		$data['this'] = $context;
 

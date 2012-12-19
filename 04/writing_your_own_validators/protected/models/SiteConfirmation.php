@@ -1,5 +1,7 @@
 <?php
-class SiteConfirmation extends CFormModel {
+
+class SiteConfirmation extends CFormModel
+{
 	public $url;
 
 	public function rules()
@@ -9,8 +11,8 @@ class SiteConfirmation extends CFormModel {
 		);
 	}
 
-	public function confirm($attribute,$params)
-   {
+	public function confirm($attribute, $params)
+	{
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $this->url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

@@ -1,4 +1,5 @@
 <?php
+
 class ArticleController extends Controller
 {
 	function actionIndex()

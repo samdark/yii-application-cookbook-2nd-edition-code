@@ -1,4 +1,5 @@
 <?php
+
 class ChartController extends CController
 {
 	public function actionIndex()

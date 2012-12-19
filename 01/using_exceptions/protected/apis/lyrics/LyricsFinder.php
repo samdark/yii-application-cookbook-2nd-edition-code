@@ -1,19 +1,25 @@
 <?php
-// create some custom exceptions to be able to catch them
-// specifically if needed
+/**
+ * In this file we are creating some custom exceptions to be able to catch them
+ * specifically if needed
+ */
 
-// general lyrics finder exception
+/**
+ * A general lyrics finder exception
+ */
 class LyricsFinderException extends CException {}
 
-// used when there is a connection problem
-class LyricsFinderHTTPException extends LyricsFinderException{}
+/**
+ * Exception used when there is a connection problem
+ */
+class LyricsFinderHTTPException extends LyricsFinderException {}
 
 
 class LyricsFinder
 {
 	private $apiUrl = 'http://example.com/lyricsapi&songtitle=%s';
 
-	function getText($songTitle)
+	public function getText($songTitle)
 	{
 		$url = $this->getRequestUrl($songTitle);
 		$curl = curl_init();
@@ -21,7 +27,7 @@ class LyricsFinder
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		$result = curl_exec($curl);
 
-		// if there is HTTP error we'll throw an exception
+		// if there is a HTTP error we'll throw an exception
 		if($result===false)
 		{
 			$errorText = curl_error($curl);

@@ -1,4 +1,5 @@
 <?php
+
 class Task extends CFormModel
 {
 	public $title;

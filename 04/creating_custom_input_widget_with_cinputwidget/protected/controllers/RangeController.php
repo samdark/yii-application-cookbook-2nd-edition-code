@@ -1,7 +1,8 @@
 <?php
+
 class RangeController extends Controller
 {
-	function actionIndex()
+	public function actionIndex()
 	{
 		$success = false;
 		$model = new RangeForm();

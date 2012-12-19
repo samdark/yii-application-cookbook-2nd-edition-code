@@ -1,4 +1,5 @@
 <?php
+
 class ECompressHtmlFilter extends CFilter
 {
 	protected function preFilter($filterChain)

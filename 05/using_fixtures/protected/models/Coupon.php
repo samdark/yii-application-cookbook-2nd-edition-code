@@ -1,4 +1,5 @@
 <?php
+
 class Coupon extends CActiveRecord
 {
 	public static function model($className=__CLASS__)
@@ -6,11 +7,13 @@ class Coupon extends CActiveRecord
 		return parent::model($className);
 	}
 
-	public function tableName() {
+	public function tableName()
+	{
 		return 'coupon';
 	}
 
-	public function rules() {
+	public function rules()
+	{
 		return array(
             array('description', 'required'),
 		);

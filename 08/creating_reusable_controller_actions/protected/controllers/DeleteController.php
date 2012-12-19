@@ -1,4 +1,5 @@
 <?php
+
 class DeleteController extends CController
 {
 	public function actions()

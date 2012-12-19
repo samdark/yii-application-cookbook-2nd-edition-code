@@ -1,23 +1,24 @@
 <?php
+
 class SoftDeleteBehaviorTest extends CDbTestCase
 {
 	protected $fixtures = array(
 		'post' => 'Post',
 	);
 
-	function testRemoved()
+	public function testRemoved()
 	{
 		$postCount = Post::model()->removed()->count();
 		$this->assertEquals(2, $postCount);
 	}
 
-	function testNotRemoved()
+	public function testNotRemoved()
 	{
 		$postCount = Post::model()->notRemoved()->count();
 		$this->assertEquals(3, $postCount);
 	}
 
-	function testRemove()
+	public function testRemove()
 	{
 		$post = Post::model()->findByPk(1);
 		$post->remove()->save();
@@ -25,7 +26,7 @@ class SoftDeleteBehaviorTest extends CDbTestCase
 		$this->assertNull(Post::model()->notRemoved()->findByPk(1));
 	}
 
-	function testRestore()
+	public function testRestore()
 	{
 		$post = Post::model()->findByPk(2);
 		$post->restore()->save();
@@ -33,7 +34,7 @@ class SoftDeleteBehaviorTest extends CDbTestCase
 		$this->assertNotNull(Post::model()->notRemoved()->findByPk(2));
 	}
 
-	function testIsDeleted()
+	public function testIsDeleted()
 	{
 		$post = Post::model()->findByPk(1);
 		$this->assertFalse($post->isRemoved());

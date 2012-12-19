@@ -1,12 +1,13 @@
 <?php
+
 class TestController extends CController
 {
 	public function actionIndex($song)
 	{
 		$lyric = 'Nothing was found.';
-		
+
 		// importing a class
-		//Yii::import('application.apis.lyrics.LyricsFinder');
+		Yii::import('application.apis.lyrics.LyricsFinder');
 
 		$finder = new LyricsFinder();
 
