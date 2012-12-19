@@ -1,0 +1,36 @@
+{
+	"repositories" : [
+		{
+			"packagist": false
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "yiisoft/yii",
+				"version": "1.1.12",
+				"source": {
+					"type":"git",
+					"url":"https://github.com/yiisoft/yii",
+					"reference":"1.1.12"
+				}
+			}
+		},
+		{
+			"type":"package",
+			"package":{
+				"name":"yiiext/iconized-menu-widget",
+				"version":"1.2.0",
+				"source":{
+					"type":"git",
+					"url":"https://github.com/yiiext/iconized-menu-widget",
+					"reference":"v1.2"
+			   }
+			}
+	   }
+	],
+	"require": {
+		"php":">=5.3.0",
+		"yiisoft/yii": "1.1.*",
+		"yiiext/iconized-menu-widget": "1.2.*"
+	}
+}
