@@ -15,10 +15,10 @@ the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
 
-<?php $this->widget("ext.facebook_events.EFacebookEvents", array(
-	'keyword' => 'php',
+<?php $this->widget("ext.yiicookbook.EYiiCookbook", array(
+	'object' => 'book',
 ))?>
 
-<?php $this->widget("ext.facebook_events.EFacebookEvents", array(
-	'keyword' => 'jquery',
+<?php $this->widget("ext.yiicookbook.EYiiCookbook", array(
+	'object' => 'website',
 ))?>

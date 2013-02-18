@@ -1,14 +1,14 @@
-.facebook-events {
+.results {
 	padding: 10px;
 	width: 400px;
 	float: left;
 }
 
-.facebook-events ul {
+.results ul {
 	padding: 0;
 }
 
-.facebook-events li {
+.results li {
 	list-style: none;
 	border: 1px solid #ccc;
 	padding: 10px;

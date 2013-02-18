@@ -1,14 +1,14 @@
 <?php
-class EFacebookEvents extends CWidget
+class EYiiCookbook extends CWidget
 {
-	public $keyword;
+	public $object;
 
 	private $loadingImageUrl;
-	protected $url = "https://graph.facebook.com/search?q=%s&type=event&callback=?";
+	protected $url = "http://yiicookbook.org/api/%s?callback=?";
 
 	protected function getUrl()
 	{
-		return sprintf($this->url, urlencode($this->keyword));
+		return sprintf($this->url, urlencode($this->object));
 	}
 
 	public function init()
@@ -21,7 +21,7 @@ class EFacebookEvents extends CWidget
 		// Publishing and registering JavaScript file
 		$cs->registerScriptFile(
 			Yii::app()->assetManager->publish(
-				$assetsDir.'/facebook_events.js'
+				$assetsDir.'/yiicookbook.js'
 			),
 			CClientScript::POS_END
 		);
@@ -29,7 +29,7 @@ class EFacebookEvents extends CWidget
 		// Publishing and registering CSS file
 		$cs->registerCssFile(
 			Yii::app()->assetManager->publish(
-				$assetsDir.'/facebook_events.css'
+				$assetsDir.'/yiicookbook.css'
 			)
 		);
 
@@ -45,7 +45,7 @@ class EFacebookEvents extends CWidget
 		$this->render("body", array(
 			'url' => $this->getUrl(),
 			'loadingImageUrl' => $this->loadingImageUrl,
-			'keyword' => $this->keyword,
+			'object' => $this->object,
 		));
 	}
 }

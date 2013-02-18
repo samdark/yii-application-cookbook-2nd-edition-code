@@ -11,7 +11,7 @@ class QuoteController extends Controller
 
 	private function getRandomQuote()
 	{
-		return $this->quotes[array_rand($this->quotes, 1)];
+		return $this->quotes[array_rand($this->quotes)];
 	}
 
 	function actionIndex()
