@@ -11,7 +11,7 @@ class FlagColumn extends CGridColumn
 		$cs=Yii::app()->getClientScript();
 		$gridId = $this->grid->getId();
 		$script = <<<SCRIPT
-		jQuery(".{$this->_flagClass}").live("click", function(e){
+		jQuery(document).on("click", ".{$this->_flagClass}", function(e){
 			e.preventDefault();
 			var link = this;
 			$.ajax({

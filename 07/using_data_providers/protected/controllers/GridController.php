@@ -8,7 +8,7 @@ class GridController extends Controller
 				'pageSize'=>10,
 			),
 			'sort'=>array(
-				'defaultOrder'=> array('title'=>false),
+				'defaultOrder'=> array('title'=>CSort::SORT_ASC),
 			)
 		));
 
@@ -66,13 +66,22 @@ class GridController extends Controller
 				'active'=>true,
 			),
 			array(
+				'name'=>'Carsten Brandt',
+				'id'=>'5951',
+				'forumName'=>'CeBe',
+				'memberSince'=>'Aug 2012',
+				'location'=>'Berlin, Germany',
+				'duty'=>'core framework development',
+				'active'=>true,
+			),
+			array(
 				'name'=>'Y!!',
 				'id'=>'1644',
 				'forumName'=>'Y!!',
 				'memberSince'=>'Aug 2010',
 				'location'=>'Germany',
 				'duty'=>'core framework development',
-				'active'=>true,
+				'active'=>false,
 			),
 			array(
 				'name'=>'Jeffrey Winesett',
@@ -106,7 +115,7 @@ class GridController extends Controller
 		$dataProvider = new CArrayDataProvider($yiiDevelopers, array(
 			'sort'=>array(
 				'attributes'=>array('name', 'id', 'active'),
-				'defaultOrder'=>array('active' => true, 'name' => false),
+				'defaultOrder'=>array('active' => CSort::SORT_DESC, 'name' => CSort::SORT_ASC),
 			),
 			'pagination'=>array(
 				'pageSize'=>10,
@@ -127,7 +136,7 @@ class GridController extends Controller
 			'totalItemCount'=>$count,
 			'sort'=>array(
 				'attributes'=>array('title'),
-				'defaultOrder'=>array('title' => false),
+				'defaultOrder'=>array('title' => CSort::SORT_ASC),
     		),
     		'pagination'=>array(
         		'pageSize'=>10,
