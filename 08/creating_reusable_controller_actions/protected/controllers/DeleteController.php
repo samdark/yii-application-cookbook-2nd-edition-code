@@ -19,11 +19,11 @@ class DeleteController extends CController
 
 	public function actionIndexPosts()
 	{
-		echo "I'm index action for Posts.";
+		echo "I'm the index action for Posts.";
 	}
 
 	public function actionIndexComments()
 	{
-		echo "I'm index action for Comments.";
+		echo "I'm the index action for Comments.";
 	}
 }

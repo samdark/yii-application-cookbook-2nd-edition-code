@@ -99,8 +99,8 @@ class Book extends CActiveRecord
 		return array(
 			'timestamps' => array(
 				'class' => 'zii.behaviors.CTimestampBehavior',
-				'createAttribute' => 'created_on',
-				'updateAttribute' => 'modified_on',
+				'createAttribute' => 'created_at',
+				'updateAttribute' => 'modified_at',
 				'setUpdateOnCreate' => true,
 			),
 		);

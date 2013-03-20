@@ -11,6 +11,7 @@ return array(
 					'class' => 'CEmailLogRoute',
 					'categories' => 'example',
 					'levels' => CLogger::LEVEL_ERROR,
+					// change to your email
 					'emails' => array('admin@example.com'),
 					'sentFrom' => 'log@example.com',
 					'subject' => 'Error at example.com',
@@ -18,12 +19,12 @@ return array(
 				array(
 					'class' => 'CFileLogRoute',
 					'levels' => CLogger::LEVEL_WARNING,
-					'logFile' => 'A',
+					'logFile' => 'warning.log',
 				),
 				array(
 					'class' => 'CFileLogRoute',
 					'levels' => CLogger::LEVEL_INFO,
-					'logFile' => 'B',
+					'logFile' => 'info.log	',
 				),
 				array(
 					'class' => 'CWebLogRoute',
