@@ -5,6 +5,7 @@ class MailtestController extends CController
 	{
 		$mail = new Zend_Mail('utf-8');
 		$mail->setHeaderEncoding(Zend_Mime::ENCODING_QUOTEDPRINTABLE);
+		// change to your email
 		$mail->addTo("alexander@example.com", "Alexander Makarov");
 		$mail->setFrom("robot@example.com", "Robot");
 		$mail->setSubject("Test email");
