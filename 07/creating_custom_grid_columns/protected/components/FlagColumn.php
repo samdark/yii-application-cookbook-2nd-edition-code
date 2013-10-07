@@ -1,5 +1,5 @@
 <?php
-class FlagColumn extends CGridColumn
+class FlagColumn extends CDataColumn//CGridColumn
 {
 	public $name;
 	public $sortable=true;
@@ -40,7 +40,9 @@ SCRIPT;
 			'class' => $this->_flagClass,
 		));
 	}
-
+	
+/*
+As we are extending CDataColumn instead of CGridColumn we cab omit copying the whole method
 	protected function renderHeaderCellContent()
 	{
 		if($this->grid->enableSorting && $this->sortable && $this->name!==null)
@@ -55,4 +57,5 @@ SCRIPT;
 		else
 			parent::renderHeaderCellContent();
 	}
+	*/
 }
