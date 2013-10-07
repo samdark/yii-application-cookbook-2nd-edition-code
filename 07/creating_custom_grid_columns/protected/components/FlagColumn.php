@@ -42,7 +42,8 @@ SCRIPT;
 	}
 	
 /*
-As we are extending CDataColumn instead of CGridColumn we cab omit copying the whole method
+	As we are extending CDataColumn instead of CGridColumn we can omit copying the whole method
+	
 	protected function renderHeaderCellContent()
 	{
 		if($this->grid->enableSorting && $this->sortable && $this->name!==null)
