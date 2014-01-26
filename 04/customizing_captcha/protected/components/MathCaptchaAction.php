@@ -14,7 +14,7 @@ class MathCaptchaAction extends CCaptchaAction
 	protected function getText($code)
 	{
 		$code = (int)$code;
-		$rand = mt_rand(1, $code-1);
+		$rand = mt_rand(min(1, $code-1), max(1, $code-1));
 		$op = mt_rand(0, 1);
 		if($op)
 			return $code-$rand."+".$rand;
