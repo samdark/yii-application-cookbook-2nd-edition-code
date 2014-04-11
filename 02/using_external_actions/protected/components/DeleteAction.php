@@ -32,7 +32,7 @@ class DeleteAction extends CAction
 			throw new CHttpException(404);
 
 		if($model->delete())
-			$this->redirect($this->redirectTo);
+			$this->controller->redirect($this->redirectTo);
 
 		throw new CHttpException(500);
 	}
