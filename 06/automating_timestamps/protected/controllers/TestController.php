@@ -7,6 +7,11 @@ class TestController extends CController
 		$post->title = "test title";
 		$post->text = "test text";
 		$post->save();
-		echo date('r', $post->created_on);
+
+		// we need to refresh the model since CTimestampBehavior uses
+		// CDbExpression to set creation date which has to be evaluated by the database
+		$post->refresh();
+
+		echo "Post has been created on " . date('r', $post->created_on);
 	}
 }
